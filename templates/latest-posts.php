@@ -10,7 +10,7 @@ wp_enqueue_style(
     'latest-posts',
     LATEST_POSTS_URL . 'build/styles/styles.min.css',
     array(),
-    fileatime( LATEST_POSTS_URL . 'build/styles/styles.min.css' )
+    fileatime( LATEST_POSTS_DIR . 'build/styles/styles.min.css' )
 );
 ?>
     <section id="latest-posts-display" class="latest-posts">

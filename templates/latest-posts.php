@@ -16,7 +16,7 @@ wp_enqueue_style(
     <section id="latest-posts-display" class="latest-posts">
         <?php foreach ( $latest_posts_data as $post_id => $post_data ) : ?>
             <div id="post-<?php echo $post_id; ?>" class="latest-posts__card card">
-                <h3><?php echo $post_data['title']; ?></h3>
+                <h3><a href="<?php echo $post_data['permalink']; ?>"><?php echo $post_data['title']; ?></a></h3>
                 <figure class="card__image">
                     <?php echo $post_data['thumbnail']; ?>
                 </figure>

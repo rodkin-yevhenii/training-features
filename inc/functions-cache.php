@@ -30,6 +30,7 @@ function get_cached_latest_posts( int $posts_limit ): array {
                 'title'     => get_the_title(),
                 'date'      => get_the_date(),
                 'thumbnail' => get_the_post_thumbnail( null, 'medium' ),
+                'permalink' => get_permalink(),
             );
         }
 

@@ -3,10 +3,10 @@
 /**
  * Plugin Name:         Latest Posts Display plugin.
  * Plugin URI:          https://github.com/rodkin-yevhenii/training-features/tree/plugins/latest-posts-display
- * Description:         provides a simple shortcode [latest_posts count="X"] to display the latest blog posts in a stylized format.
+ * Description:         The plugin provides a simple shortcode [latest_posts count="X"] to display the latest blog posts.
  * Version:             1.0.0
- * Requires at least:   4.0
- * Requires PHP:        8.0
+ * Requires at least:   5.0
+ * Requires PHP:        7.4
  * Author:              Yevhenii Rodkin
  * Author URI:          https://www.linkedin.com/in/yevhenii-rodkin/
  * Text Domain:         latest-posts-display

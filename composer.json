@@ -1,0 +1,15 @@
+{
+  "name": "yevhenii_rodkin/latest-posts-display",
+  "description": "The plugin provides a simple shortcode [latest_posts count=\"X\"] to display the latest blog posts",
+  "version": "1.0.0",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Yevhenii Rodkin",
+      "email": "rodkin.yevhenii@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  }
+}

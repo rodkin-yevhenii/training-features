@@ -1,0 +1,49 @@
+// To build this file just put it to the command line in the plugin root:
+// sass --watch ./assets/styles/styles.scss:./build/styles/styles.min.css -s compressed
+
+.latest-posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  .card {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0 15px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card__image {
+      width: 100%;
+      max-height: 170px;
+      overflow: hidden;
+      margin: 0 0 5px 0;
+    }
+
+    .card__date {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    time {
+      font-weight: 600;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-right: 15px;
+      width: 50%;
+    }
+  }
+
+  .card:nth-child(2n) {
+    @media screen and (min-width: 768px) {
+      border-left: 1px #ccc solid;
+      padding-left: 15px ;
+    }
+  }
+}

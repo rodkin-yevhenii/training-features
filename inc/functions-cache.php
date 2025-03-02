@@ -19,7 +19,7 @@ function get_cached_latest_posts( int $posts_limit ): array {
     $key               = 'latest-posts-display';
     $latest_posts_data = get_transient( $key );
 
-    if ( empty( $latest_posts_data ) || count($latest_posts_data) < $posts_limit ) {
+    if ( empty( $latest_posts_data ) || count( $latest_posts_data ) < $posts_limit ) {
         $latest_posts_data = [];
         $query             = get_latest_posts_query( array( 'posts_per_page' => $posts_limit ) );
 

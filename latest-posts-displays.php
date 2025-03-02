@@ -12,12 +12,12 @@
  * Text Domain:         latest-posts-display
  */
 
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
     return;
 }
 
-define('LATEST_POSTS_DIR', plugin_dir_path(__FILE__));
-define('LATEST_POSTS_URL', plugin_dir_url(__FILE__));
+define( 'LATEST_POSTS_DIR', plugin_dir_path( __FILE__ ) );
+define( 'LATEST_POSTS_URL', plugin_dir_url( __FILE__ ) );
 
 const LATEST_POSTS_DEFAULT_NUMBER = 10;
 

@@ -35,14 +35,14 @@ function latest_posts_display_callback( array $atts ): string {
 
     // Start profiling.
     if ( defined( 'QM_VERSION' ) && current_user_can( 'manage_options' ) ) {
-        do_action( 'qm/start', 'render_results' );
+        do_action( 'qm/start', 'latest_posts_shortcode' );
     }
 
     include LATEST_POSTS_DIR . 'templates/latest-posts.php';
 
     // Stop profiling.
     if ( defined( 'QM_VERSION' ) && current_user_can( 'manage_options' ) ) {
-        do_action( 'qm/stop', 'render_results' );
+        do_action( 'qm/stop', 'latest_posts_shortcode' );
     }
 
     return ob_get_clean();

@@ -2,6 +2,8 @@
 
 It's a simple wordpress plugin that provides the `[latest_posts]` shordcode to display a list of latest posts
 
+![](https://github.com/rodkin-yevhenii/training-features/blob/images/latest-posts-display/screenshot.png)
+
 ## Available Shortcode variatins
 
 - `[latest_posts]` - display 10 latest posts;

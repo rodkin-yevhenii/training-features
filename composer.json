@@ -1,0 +1,28 @@
+{
+  "name": "yevhenii_rodkin/posts-popularity-analysis",
+  "description": "description",
+  "version": "1.0.0",
+  "type": "wordpress-plugin",
+  "autoload": {
+    "psr-4": {
+      "YR\\": "inc/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Yevhenii Rodkin",
+      "email": "rodkin.yevhenii@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^3.1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

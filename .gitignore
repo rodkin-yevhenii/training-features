@@ -1,2 +1,10 @@
 # Ignore IDE files
 .idea
+
+# Ignore dependecies
+vendor/
+node_modules/
+
+# Pre-commit hook
+.husky/
+!/.husky/pre-commit

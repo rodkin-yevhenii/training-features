@@ -27,3 +27,8 @@ if ( ! file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 
 	return;
 }
+
+// Autoload.
+require_once plugin_dir_path( __FILE__ ) . '/vendor/autoload.php';
+
+BPPA\Plugin::init( __FILE__ );

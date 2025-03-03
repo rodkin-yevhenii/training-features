@@ -3,6 +3,14 @@
   "description": "description",
   "version": "1.0.0",
   "type": "wordpress-plugin",
+  "scripts": {
+    "fixer": "php vendor/bin/phpcbf --standard=WordPress --extensions=php  --ignore=vendor/*",
+    "lint": "php vendor/bin/phpcs --standard=WordPress --extensions=php --ignore=vendor/*",
+    "fix": [
+      "@fixer",
+      "@lint"
+    ]
+  },
   "autoload": {
     "psr-4": {
       "YR\\": "inc/"
@@ -17,12 +25,13 @@
   "require": {
     "php": ">=7.4"
   },
-  "require-dev": {
-    "wp-coding-standards/wpcs": "^3.1.0"
-  },
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.11",
+    "wp-coding-standards/wpcs": "^3.1"
   }
 }

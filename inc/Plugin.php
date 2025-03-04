@@ -18,6 +18,13 @@ class Plugin {
 	 * @return void
 	 */
 	public static function init( string $file ): void {
-        Activation::init( $file );
-    }
+		Activation::init( $file );
+
+		if ( ! defined( 'DOING_AJAX' ) ) {
+			$db = DB::get_instance();
+			// $db->insert_view( 273, '192.168.123.256' );
+			$a = $db->get_posts_views_number( DB::RANGE_WEEK );
+			$b = 1;
+		}
+	}
 }

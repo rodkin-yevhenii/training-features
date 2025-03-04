@@ -3,6 +3,7 @@
  * Get data from the database, create/delete tables.
  *
  * @author Yevhenii Rodkin <rodkin.yevhenii@gmail.com>
+ * @package BPPA\Helpers
  */
 
 namespace BPPA\Helpers;
@@ -142,6 +143,15 @@ class DB {
 	 */
 	public function drop_table(): void {
 		$this->wpdb->query( "DROP TABLE IF EXISTS {$this->table_name}" );
+	}
+
+	/**
+	 * Remove all data and restore autoincrement.
+	 *
+	 * @return void
+	 */
+	public function reset_table(): void {
+		$this->wpdb->query( "TRUNCATE TABLE {$this->table_name}" );
 	}
 
 	/**

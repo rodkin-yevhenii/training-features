@@ -1,5 +1,6 @@
 module.exports = {
   entry: {
+    admin: './assets/scripts/admin',
     main: './assets/scripts/main',
   },
   output: {

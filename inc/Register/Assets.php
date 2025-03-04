@@ -29,6 +29,52 @@ final class Assets {
 	protected function __construct() {
 		// Actions.
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_front_scripts' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_assets' ) );
+	}
+
+	/**
+	 * Register dashboard scripts.
+	 *
+	 * @param string $hook_suffix Page suffix.
+	 *
+	 * @return void
+	 */
+	public function register_admin_assets( string $hook_suffix ): void {
+		if ( 'posts_page_bppa-analytics' !== $hook_suffix ) {
+			return;
+		}
+
+		// Scripts.
+		wp_enqueue_script(
+			'bppa-dashboard',
+			Plugin::get_plugin_file_url( 'public/admin.js' ),
+			array( 'jquery' ),
+			fileatime( Plugin::get_plugin_file_path( 'public/admin.js' ) ),
+			true
+		);
+
+		// Styles.
+		wp_enqueue_style(
+			'data-tables',
+			'https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css',
+			array(),
+			'2.2.2'
+		);
+
+		wp_enqueue_style(
+			'bppa-dashboard',
+			Plugin::get_plugin_file_url( 'public/admin.min.css' ),
+			array(),
+			fileatime( Plugin::get_plugin_file_path( 'public/admin.min.css' ) ),
+		);
+
+		wp_localize_script(
+			'bppa-dashboard',
+			'bppa_dashboard',
+			array(
+				'nonce' => wp_create_nonce( 'wp_rest' ),
+			)
+		);
 	}
 
 	/**

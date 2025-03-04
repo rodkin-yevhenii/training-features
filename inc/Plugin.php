@@ -11,6 +11,7 @@
 
 namespace BPPA;
 
+use BPPA\Admin\Dashboard;
 use BPPA\Register\Assets;
 
 /**
@@ -28,6 +29,8 @@ class Plugin {
 		Activation::init( $file );
 		Assets::init();
 		Ajax\Router::init();
+		Dashboard::init();
+		Rest\API::init();
 	}
 
 	/**

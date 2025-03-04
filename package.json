@@ -5,9 +5,16 @@
   "author": "Yevhenii Rodkin",
   "scripts": {
     "start:js": "wp-scripts start --mode=development",
-    "build:js": "wp-scripts build"
+    "build:js": "wp-scripts build",
+    "start:sass": "sass assets/styles/admin.scss:public/admin.min.css --watch",
+    "build:sass": "sass assets/styles/admin.scss:public/admin.min.css --style compressed",
+    "start": "npm run start:js & npm run start:sass",
+    "build": "npm run build:js && npm run build:sass"
   },
   "devDependencies": {
     "@wordpress/scripts": "^30.12.0"
+  },
+  "dependencies": {
+    "datatables.net-dt": "^2.2.2"
   }
 }

@@ -1,0 +1,33 @@
+.bppa-dashboard {
+  padding: 0 20px 0 0;
+
+  .header {
+    display: flex;
+  }
+
+  .actions {
+    margin-left: 40px;
+
+    button {
+      padding: 10px;
+    }
+
+    button + button {
+      margin-left: 10px;
+    }
+  }
+
+  .dt-length select {
+    appearance: auto;
+    background: none;
+  }
+
+  .range {
+    font-weight: 700;
+    margin-top: 20px;
+
+    a {
+      margin-left: 30px;
+    }
+  }
+}

@@ -17,19 +17,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
  * @param ip User IP address.
  */
 function send_new_view(ip) {
+  const formData = new URLSearchParams();
+  formData.append("action", "add_new_view");
+  formData.append("nonce", bppa_ajax.nonce);
+  formData.append("post_id", bppa_ajax.post_id);
+  formData.append("ip", ip);
+
   fetch(bppa_ajax.ajax_url, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
-    body: JSON.stringify(
-      {
-        action: 'add_new_view',
-        nonce: bppa_ajax.nonce,
-        post_id: bppa_ajax.post_id,
-        ip
-      }
-    )
+    body: formData.toString()
   })
     .catch(error => console.error('Error: ', error));
 }

@@ -27,6 +27,7 @@ class Plugin {
 	public static function init( string $file ): void {
 		Activation::init( $file );
 		Assets::init();
+		Ajax\Router::init();
 	}
 
 	/**

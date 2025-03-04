@@ -27,7 +27,7 @@ class DB {
 	 * Possible date ranges for views filtering.
 	 */
 	private const DATE_RANGES = array(
-		'ALL',
+		'ALL'      => 'all',
 		'DAY'      => '-1 day',
 		'WEEK'     => '-1 week',
 		'2 WEEKS'  => '-2 weeks',

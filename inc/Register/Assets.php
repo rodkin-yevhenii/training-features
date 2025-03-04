@@ -43,11 +43,21 @@ final class Assets {
 		}
 
 		wp_enqueue_script(
-			'bbpa-frontend',
+			'bppa-frontend',
 			Plugin::get_plugin_file_url( 'public/main.js' ),
 			array(),
 			fileatime( Plugin::get_plugin_file_path( 'public/main.js' ) ),
 			true
+		);
+
+		wp_localize_script(
+			'bppa-frontend',
+			'bppa_ajax',
+			array(
+				'ajax_url' => admin_url( 'admin-ajax.php' ),
+				'post_id'  => get_the_ID(),
+				'nonce'    => wp_create_nonce( 'bppa_add_view' ),
+			)
 		);
 	}
 

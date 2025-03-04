@@ -1,14 +1,21 @@
 <?php
 /**
- * Main plugin entrypoint. This class init the plugin.
+ * Class Plugin.
  *
+ * This class init whole plugin functionality. Also, it provides
+ * methods for getting any plugin file path or URL.
+ *
+ * @package BPPA
  * @author Yevhenii Rodkin <rodkin.yevhenii@gmail.com>
  */
 
 namespace BPPA;
 
-use BPPA\Helpers\DB;
+use BPPA\Register\Assets;
 
+/**
+ * Class Plugin
+ */
 class Plugin {
 	/**
 	 * Init plugin functionality.
@@ -19,12 +26,28 @@ class Plugin {
 	 */
 	public static function init( string $file ): void {
 		Activation::init( $file );
+		Assets::init();
+	}
 
-		if ( ! defined( 'DOING_AJAX' ) ) {
-			$db = DB::get_instance();
-			// $db->insert_view( 273, '192.168.123.256' );
-			$a = $db->get_posts_views_number( DB::RANGE_WEEK );
-			$b = 1;
-		}
+	/**
+	 * Get plugin file path.
+	 *
+	 * @param string $path File path in the plugin folder. Don't use slash at the beginning of the path.
+	 *
+	 * @return string
+	 */
+	public static function get_plugin_file_path( string $path = '' ): string {
+		return BPPA_DIR . $path;
+	}
+
+	/**
+	 * Get plugin file URL.
+	 *
+	 * @param string $path File path in the plugin folder. Don't use slash in at the start of the path.
+	 *
+	 * @return string
+	 */
+	public static function get_plugin_file_url( string $path = '' ): string {
+		return BPPA_URL . $path;
 	}
 }

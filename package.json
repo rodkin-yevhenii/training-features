@@ -1,0 +1,13 @@
+{
+  "name": "posts-popularity-analysis",
+  "version": "1.0.0",
+  "description": "The plugin allows to analyze blog post popularity directly within the WordPress admin dashboard. It tracks blog post views and displays insights on the most viewed content.",
+  "author": "Yevhenii Rodkin",
+  "scripts": {
+    "start:js": "wp-scripts start --mode=development",
+    "build:js": "wp-scripts build"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.12.0"
+  }
+}

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(e=>{console.log("DOM fully loaded and parsed"),setTimeout((()=>{console.log("Send Ajax")}),5e3)}));

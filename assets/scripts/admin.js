@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 })
 
 document.getElementById('reset-analytics').addEventListener('click', () => {
-  const answer = window.confirm('Are you sure you wish to reset all views data?')
+  const answer = window.confirm('Are you sure you wish to reset all analytics data?')
   if (answer) {
     const data = {
       nonce: window.bppa_dashboard.nonce

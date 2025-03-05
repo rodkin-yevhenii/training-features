@@ -13,6 +13,7 @@ namespace BPPA;
 
 use BPPA\Admin\Dashboard;
 use BPPA\CLI\Commands;
+use BPPA\Helpers\Helpers;
 use BPPA\Register\Assets;
 
 /**
@@ -33,6 +34,7 @@ class Plugin {
 		Dashboard::init();
 		Rest\API::init();
 		Commands::init();
+		Helpers::init();
 	}
 
 	/**

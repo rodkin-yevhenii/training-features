@@ -91,6 +91,17 @@ class DB {
 		);
 	}
 
+    /**
+     * Remove all analytics data connected to the post.
+     *
+     * @param int $post_id Post ID.
+     *
+     * @return void
+     */
+    public function remove_posts_data(int $post_id): void {
+        $this->wpdb->delete($this->table_name, array('post_id' => $post_id), array('%d'));
+    }
+
 	/**
 	 * Get post views for a specific range.
 	 *

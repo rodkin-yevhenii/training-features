@@ -48,7 +48,7 @@ class RegisterAnalyticsResetRestRoute implements RegisterRestRoutInterface {
 				'callback'            => array( $handler, 'handle' ),
 				'args'                => array(),
 				'permission_callback' => function () {
-					return current_user_can( 'edit_others_posts' );
+					return current_user_can( 'manage_options' );
 				},
 			),
 		);

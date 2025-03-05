@@ -73,22 +73,19 @@ class DB {
 	/**
 	 * Add a new view to the table.
 	 *
-	 * @param int    $post_id Post ID.
-	 * @param string $ip_address User IP address.
+	 * @param int $post_id Post ID.
 	 *
 	 * @return void
 	 */
-	public function insert_view( int $post_id, string $ip_address ): void {
+	public function insert_view( int $post_id ): void {
 		$this->wpdb->insert(
 			$this->table_name,
 			array(
-				'post_id'    => $post_id,
-				'ip_address' => $ip_address,
-				'date'       => current_datetime()->format( 'Y-m-d H:i:s' ),
+				'post_id' => $post_id,
+				'date'    => current_datetime()->format( 'Y-m-d H:i:s' ),
 			),
 			array(
 				'%d',
-				'%s',
 				'%s',
 			)
 		);
@@ -129,7 +126,6 @@ class DB {
 		$sql = "CREATE TABLE {$this->table_name} (
           id bigint(20) NOT NULL AUTO_INCREMENT,
           post_id bigint(20) NOT NULL,
-          ip_address varchar(15) NOT NULL,
           date datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
           PRIMARY KEY  (id)
         ) $charset_collate;";

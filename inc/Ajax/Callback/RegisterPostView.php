@@ -30,16 +30,15 @@ class RegisterPostView {
 		}
 
 		$post_id = filter_input( INPUT_POST, 'post_id', FILTER_VALIDATE_INT ) ?: 0;
-		$ip      = filter_input( INPUT_POST, 'ip', FILTER_VALIDATE_IP ) ?: null;
 
-		if ( empty( $post_id ) || empty( $ip ) ) {
+		if ( empty( $post_id ) ) {
 			wp_send_json_error(
-				array( 'message' => 'Post ID and User IP are required.' ),
+				array( 'message' => 'Post ID is required.' ),
 				403
 			);
 		}
 
 		$db = DB::get_instance();
-		$db->insert_view( $post_id, $ip );
+		$db->insert_view( $post_id );
 	}
 }

@@ -10,9 +10,6 @@
 
 namespace BPPA\CLI;
 
-use BPPA\CLI\Handlers\GenerateDemaDataHandler;
-use BPPA\CLI\Handlers\ResetHandler;
-
 /**
  * Class Commands
  */

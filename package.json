@@ -6,8 +6,8 @@
   "scripts": {
     "start:js": "wp-scripts start --mode=development",
     "build:js": "wp-scripts build",
-    "start:sass": "sass assets/styles/admin.scss:public/admin.min.css --watch",
-    "build:sass": "sass assets/styles/admin.scss:public/admin.min.css --style compressed",
+    "start:sass": "sass assets/styles/admin.scss:public/admin.min.css assets/styles/front.scss:public/front.min.css --watch",
+    "build:sass": "sass assets/styles/admin.scss:public/admin.min.css assets/styles/front.scss:public/front.min.css --style compressed",
     "start": "npm run start:js & npm run start:sass",
     "build": "npm run build:js && npm run build:sass"
   },

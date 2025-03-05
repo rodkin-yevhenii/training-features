@@ -10,6 +10,7 @@
 
 namespace BPPA\Helpers;
 
+use Exception;
 use wpdb;
 
 /**
@@ -91,16 +92,16 @@ class DB {
 		);
 	}
 
-    /**
-     * Remove all analytics data connected to the post.
-     *
-     * @param int $post_id Post ID.
-     *
-     * @return void
-     */
-    public function remove_posts_data(int $post_id): void {
-        $this->wpdb->delete($this->table_name, array('post_id' => $post_id), array('%d'));
-    }
+	/**
+	 * Remove all analytics data connected to the post.
+	 *
+	 * @param int $post_id Post ID.
+	 *
+	 * @return void
+	 */
+	public function remove_posts_data( int $post_id ): void {
+		$this->wpdb->delete( $this->table_name, array( 'post_id' => $post_id ), array( '%d' ) );
+	}
 
 	/**
 	 * Get post views for a specific range.
@@ -109,7 +110,7 @@ class DB {
 	 *
 	 * @return array
 	 */
-	public function get_posts_views_number( string $range = 'ALL' ): array {
+	public function get_popular_posts( string $range = 'ALL' ): array {
 		$sql = "SELECT post_id, COUNT(post_id) AS views FROM {$this->table_name}";
 
 		if ( array_key_exists( $range, static::DATE_RANGES ) && static::RANGE_ALL !== $range ) {

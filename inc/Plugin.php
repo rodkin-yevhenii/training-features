@@ -35,6 +35,9 @@ class Plugin {
 		Rest\API::init();
 		Commands::init();
 		Helpers::init();
+
+		// Shortcodes.
+		Shortcode\MostPopularPosts::init();
 	}
 
 	/**

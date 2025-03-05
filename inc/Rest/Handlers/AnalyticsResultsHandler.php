@@ -49,7 +49,7 @@ class AnalyticsResultsHandler implements HandleRequestInterface {
 			default    => DB::RANGE_ALL
 		};
 		$db        = DB::get_instance();
-		$analytics = $db->get_posts_views_number( $range );
+		$analytics = $db->get_popular_posts( $range );
 		$data      = array();
 
 		foreach ( $analytics as $post_data ) {

@@ -1,0 +1,54 @@
+.popular-posts {
+  width: 100%;
+
+  h2 {
+    text-align: center;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    box-sizing: border-box;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 48%;
+      border: 1px solid #ccc;
+
+      &:hover {
+        border: 1px solid #979797;
+        box-shadow: 3px 3px 8px 6px rgba(34, 60, 80, 0.2);
+      }
+    }
+  }
+
+  figure {
+    width: 100%;
+    max-height: 160px;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card__date {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  time {
+    font-weight: 600;
+  }
+}

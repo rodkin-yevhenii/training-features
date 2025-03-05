@@ -108,6 +108,20 @@ final class Assets {
 	}
 
 	/**
+	 * Register shortcode styles.
+	 *
+	 * @return void
+	 */
+	public static function register_shortcode_styles(): void {
+		wp_enqueue_style(
+			'bppa-shortcode',
+			Plugin::get_plugin_file_url( 'public/front.min.css' ),
+			array(),
+			fileatime( Plugin::get_plugin_file_path( 'public/front.min.css' ) )
+		);
+	}
+
+	/**
 	 * Get class instance.
 	 *
 	 * @return Assets

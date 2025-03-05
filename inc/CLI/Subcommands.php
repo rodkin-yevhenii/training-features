@@ -31,7 +31,7 @@ class Subcommands {
 			\WP_CLI::warning( 'This command doesn\'t support any arguments.' );
 		}
 
-		if ( empty( $db->get_posts_views_number() ) ) {
+		if ( empty( $db->get_popular_posts() ) ) {
 			\WP_CLI::warning( 'There are no analytics data.' );
 
 			return;
@@ -39,7 +39,7 @@ class Subcommands {
 
 		$db->reset_table();
 
-		if ( ! empty( $db->get_posts_views_number() ) ) {
+		if ( ! empty( $db->get_popular_posts() ) ) {
 			\WP_CLI::error( 'Something went wrong while resetting posts views.' );
 
 			return;

@@ -3,6 +3,7 @@ import DataTable from 'datatables.net-dt';
 document.addEventListener("DOMContentLoaded", (event) => {
   let table = new DataTable('#bppa-dashboard__table', {
     pageLength: 50,
+    order: [[2, 'desc']],
     ajax: {
       url: window.location.origin + '/wp-json/bppa/v1/analytics/list',
       type: 'post',

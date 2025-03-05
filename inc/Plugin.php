@@ -12,6 +12,7 @@
 namespace BPPA;
 
 use BPPA\Admin\Dashboard;
+use BPPA\CLI\Commands;
 use BPPA\Register\Assets;
 
 /**
@@ -31,6 +32,7 @@ class Plugin {
 		Ajax\Router::init();
 		Dashboard::init();
 		Rest\API::init();
+		Commands::init();
 	}
 
 	/**

@@ -1,5 +1,7 @@
 <?php
 /**
+ * Class DB
+ *
  * Get data from the database, create/delete tables.
  *
  * @author Yevhenii Rodkin <rodkin.yevhenii@gmail.com>

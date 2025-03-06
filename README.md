@@ -54,9 +54,17 @@ limit 50, you will see just 5 posts in the dashboard.
 1. Clone plugin repository into your Plugins folder in the WordPress folder. Run these commands in the plugin folder:
 ```
 mkdir posts-popularity-analysis
+```
+```
 cd posts-popularity-analysis
+```
+```
 git clone git@github.com:rodkin-yevhenii/training-features.git .
+```
+```
 git checkout plugins/posts-popularity-analysis-plugin
+```
+```
 git pull origin plugins/posts-popularity-analusis-plugin
 ```
 2. Install coposer dependecies. Run these commands in the plugin root folder:

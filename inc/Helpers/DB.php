@@ -25,7 +25,7 @@ class DB {
 	const RANGE_WEEK    = 'WEEK';
 	const RANGE_2_WEEKS = '2 WEEKS';
 	const RANGE_MONTH   = 'MONTH';
-	const RANGE_3_MOTHS = '3 MONTHS';
+	const RANGE_3_MONTHS = '3 MONTHS';
 
 	/**
 	 * Possible date ranges for views filtering.

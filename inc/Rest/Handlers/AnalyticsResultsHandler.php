@@ -45,7 +45,7 @@ class AnalyticsResultsHandler implements HandleRequestInterface {
 			'week'     => DB::RANGE_WEEK,
 			'2_weeks'  => DB::RANGE_2_WEEKS,
 			'month'    => DB::RANGE_MONTH,
-			'3_months' => DB::RANGE_3_MOTHS,
+			'3_months' => DB::RANGE_3_MONTHS,
 			default    => DB::RANGE_ALL
 		};
 		$db        = DB::get_instance();

@@ -14,7 +14,7 @@ if ( empty( $posts_data ) ) {
 add_action( 'wp_enqueue_scripts', array( Assets::class, 'register_shortcode_styles' ) );
 ?>
 <div id="bppa-most-popular-posts" class="popular-posts">
-	<h2>The most popular posts</h2>
+	<h2><?php _e( 'The most popular posts', 'bppa' ); ?></h2>
 	<div class="cards">
 		<?php foreach ( $posts_data as $post_data ) : ?>
 			<div class="card">
@@ -23,9 +23,11 @@ add_action( 'wp_enqueue_scripts', array( Assets::class, 'register_shortcode_styl
 						<?php echo esc_html( $post_data['title'] ); ?>
 					</a>
 				</h3>
-				<figure class="card__image">
-					<?php echo $post_data['thumbnail']; ?>
-				</figure>
+				<?php if ( ! empty( $post_data['thumbnail'] ) ) : ?>
+					<figure class="card__image">
+						<?php echo $post_data['thumbnail']; ?>
+					</figure>
+				<?php endif; ?>
 				<div class="card__date">
 					<time><?php echo esc_html( $post_data['date'] ); ?></time>
 					<div><?php echo esc_html( $post_data['views'] ); ?> views</div>

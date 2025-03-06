@@ -13,12 +13,12 @@
 		data-range="<?php echo filter_input( INPUT_GET, 'range' ) ?: 'all'; ?>"
 	>
 		<span>Show results for:</span>
-		<a href="/wp-admin/edit.php?page=bppa-analytics&range=day">Day</a>
-		<a href="/wp-admin/edit.php?page=bppa-analytics&range=week">Week</a>
-		<a href="/wp-admin/edit.php?page=bppa-analytics&range=2_weeks">2 Weeks</a>
-		<a href="/wp-admin/edit.php?page=bppa-analytics&range=month">Month</a>
-		<a href="/wp-admin/edit.php?page=bppa-analytics&range=3_months">3 Months</a>
-		<a href="/wp-admin/edit.php?page=bppa-analytics&range=all">All</a>
+		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=day' ); ?>">Day</a>
+		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=week' ); ?>">Week</a>
+		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=2_weeks' ); ?>">2 Weeks</a>
+		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=month' ); ?>">Month</a>
+		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=3_months' ); ?>">3 Months</a>
+		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=all' ); ?>">All</a>
 	</div>
 	<div class="bppa-dashboard__body">
 		<table id="bppa-dashboard__table" class="display" style="width:100%">

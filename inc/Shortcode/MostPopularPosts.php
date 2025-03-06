@@ -12,7 +12,6 @@ namespace BPPA\Shortcode;
 
 use BPPA\Helpers\DB;
 use BPPA\Plugin;
-use Exception;
 use WP_Query;
 
 /**
@@ -130,7 +129,11 @@ class MostPopularPosts {
 
 			$query->reset_postdata();
 			$data = $fresh_data;
-			set_transient( $key, $data, 5 * MINUTE_IN_SECONDS );
+			set_transient(
+				$key,
+				$data,
+				apply_filters( 'bppa_transient_cache_lifetime', 5 * MINUTE_IN_SECONDS )
+			);
 		}
 
 		if ( count( $data ) > $limit ) {

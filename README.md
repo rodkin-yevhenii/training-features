@@ -5,6 +5,20 @@ views and displays insights on the most viewed content. Also this plagin registe
 This shordcode shows on the frontend the most viewed post. One more feature that provide custom WP CLI commands that
 can generate demo analitics data or remove all analytics data.
 
+<!-- TOC -->
+* [Blog Post Popularity Analysis  plugin](#blog-post-popularity-analysis--plugin)
+  * [Dashdoard](#dashdoard)
+  * [The most popular posts shortcode](#the-most-popular-posts-shortcode)
+  * [Custom `wp cli` commands](#custom-wp-cli-commands)
+    * [Reset analytics data](#reset-analytics-data)
+    * [Generate demo data](#generate-demo-data)
+  * [Requirements](#requirements)
+  * [Installation](#installation)
+  * [Useful commands](#useful-commands)
+  * [Plugin structure](#plugin-structure)
+  * [Contacts](#contacts)
+<!-- TOC -->
+
 ## Dashdoard
 
 The plugin register a new page with custom dashboard in the Posts menu.

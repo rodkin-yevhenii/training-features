@@ -1,15 +1,15 @@
 # Blog Post Popularity Analysis  plugin
 
-The plugin allows to analyze blog posts popularity directly within the WordPress admin dashboard. It tracks blog post
-views and displays insights on the most viewed content. Also this plagin registered `[most_popular_posts]`  shortcode.
-This shordcode shows on the frontend the most viewed post. One more feature that provide custom WP CLI commands that
-can generate demo analitics data or remove all analytics data.
+The plugin allows analyzing blog post popularity directly within the WordPress admin dashboard. It tracks blog post
+views and displays insights on the most viewed content. Also, this plugin registers the `[most_popular_posts]` shortcode.
+This shortcode displays the most viewed post on the frontend. One more feature provides custom WP CLI commands that can
+generate demo analytics data or remove all analytics data.
 
 <!-- TOC -->
 * [Blog Post Popularity Analysis  plugin](#blog-post-popularity-analysis--plugin)
   * [Dashdoard](#dashdoard)
   * [The most popular posts shortcode](#the-most-popular-posts-shortcode)
-  * [Custom `wp cli` commands](#custom-wp-cli-commands)
+  * [Custom wp cli commands](#custom-wp-cli-commands)
     * [Reset analytics data](#reset-analytics-data)
     * [Generate demo data](#generate-demo-data)
   * [Requirements](#requirements)
@@ -21,11 +21,12 @@ can generate demo analitics data or remove all analytics data.
 
 ## Dashdoard
 
-The plugin register a new page with custom dashboard in the Posts menu.
+The plugin adds a new admin page with a custom dashboard under the Posts menu.
 
 ![](https://github.com/rodkin-yevhenii/training-features/blob/images/posts-popularity-analysis/dashboard.png)
 
-There are you can find anatics data with total views number. The site administator can clear all data (red button).
+On this page, you can access analytics data, including total view counts. The site administrator has the option to clear
+all data by clicking the red button.
 
 **Feel free to use**:
 - Search;
@@ -36,10 +37,9 @@ There are you can find anatics data with total views number. The site administat
 
 ## The most popular posts shortcode
 
-This `[most_popular_posts]` shordcode shows the most popular posts on the frontent. The number of posts can be changed.
-Also, you can show posts that have been published in a specified time interval. To increase the site performance we
-added to transient cache the data of the most popular posts. All analytics data stored in the custom table. This table
-will be removed when you decide to remove the plugin.
+The `[most_popular_posts]` shortcode displays the most popular posts on the frontend. The number of posts can be adjusted.
+Additionally, you can display posts published within a specified time interval. To improve site performance, we store the most popular posts' data in a transient cache.
+All analytics data is stored in a custom table, which will be removed when you uninstall the plugin.
 
 ![](https://github.com/rodkin-yevhenii/training-features/blob/images/posts-popularity-analysis/shortcode.png)
 
@@ -50,15 +50,21 @@ will be removed when you decide to remove the plugin.
 
 ## Custom `wp cli` commands
 ### Reset analytics data
-`wp bppa reset` - This command remove all data from the table in the database. It doesn't have any arguments or flags.
+```
+wp bppa reset
+ ```
+This command remove all data from the table in the database. It doesn't have any arguments or flags.
 
 ###  Generate demo data
-`wp bppa generate` - Generate demo data for the dashboard. All views records will have current date. It doesn't have
-any arguments and support some `limit` flag.t magage have many
+```
+wp bppa generate
+```
+This command generates demo data for the dashboard. All views records will have current date. It doesn't have
+any arguments and support some `limit` flag.
 
-The `limit` flag manage have many posts will be added to the demo data. I'd recommend to set more than 20th posts.
-**Pay attention** this feature add demo data for already published posts, so if you have 5 published posts but you've set
-limit 50, you will see just 5 posts in the dashboard.
+The `--limit` flag determines how many posts will be added to the demo data. It's recommended to set this to more than
+20 posts. Please note that this feature adds demo data only for already published posts. Therefore, if you have 5
+published posts but set the limit to 50, you will see only 5 posts in the dashboard.
 
 ## Requirements
 - PHP >= 8.0
@@ -81,7 +87,7 @@ git checkout plugins/posts-popularity-analysis-plugin
 ```
 git pull origin plugins/posts-popularity-analusis-plugin
 ```
-2. Install coposer dependecies. Run these commands in the plugin root folder:
+2. Install coposer dependecies and set up autoload. Run these commands in the plugin root folder:
 
 Production:
 ```
@@ -92,7 +98,7 @@ Local server for development:
 ```
 composer install
 ```
-In this case you will instal phpcs and phpcbf tools with WordPress code-standards.
+In this case you install phpcs and phpcbf tools with WordPress code-standards.
 
 3. Install node modules. Run these commands in the plugin root folder:
 
@@ -105,7 +111,7 @@ Local server for development:
 ```
 npm i
 ```
-In this case you will instal sass module.
+In this case you instal sass module.
 
 4. Go to the admin panel and activate the plugin.
 

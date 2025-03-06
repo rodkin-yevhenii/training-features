@@ -8,16 +8,43 @@ can generate demo analitics data or remove all analytics data.
 ## Dashdoard
 
 The plugin register a new page with custom dashboard in the Posts menu.
+
 ![](https://github.com/rodkin-yevhenii/training-features/blob/images/posts-popularity-analysis/dashboard.png)
 
 There are you can find anatics data with total views number. The site administator can clear all data (red button).
 
-Feel free to use:
+**Feel free to use**:
 - Search;
 - Sorting;
 - Filter by time range;
 - Pagination;
 - Manage the number of visible posts;
+
+## The most popular posts shortcode
+
+This `[most_popular_posts]` shordcode shows the most popular posts on the frontent. The number of posts can be changed.
+Also, you can show posts that have been published in a specified time interval. To increase the site performance we
+added to transient cache the data of the most popular posts. All analytics data stored in the custom table. This table
+will be removed when you decide to remove the plugin.
+
+![](https://github.com/rodkin-yevhenii/training-features/blob/images/posts-popularity-analysis/shortcode.png)
+
+**Shortcode attributes**
+- **limit** - set the number of visible posts;
+- **start_date** - show the posts that has been puplished at that date or after. Date format: YYYY-MM-DD;
+- **end_date** - show the posts that has been puplished at that date or before. Date format: YYYY-MM-DD;
+
+## Custom `wp cli` commands
+### Reset analytics data
+`wp bppa reset` - This command remove all data from the table in the database. It doesn't have any arguments or flags.
+
+###  Generate demo data
+`wp bppa generate` - Generate demo data for the dashboard. All views records will have current date. It doesn't have
+any arguments and support some `limit` flag.t magage have many
+
+The `limit` flag manage have many posts will be added to the demo data. I'd recommend to set more than 20th posts.
+**Pay attention** this feture add demo data for already published posts, so if you have 5 published posts but you've set
+limit 50, you will see just 5 posts in the dashboard.
 
 ## Requirements
 - PHP >= 8.0
@@ -29,7 +56,7 @@ Feel free to use:
 mkdir posts-popularity-analysis
 cd posts-popularity-analysis
 git clone git@github.com:rodkin-yevhenii/training-features.git .
-git checkout plugins/posts-popularity-analusis-plugin
+git checkout plugins/posts-popularity-analysis-plugin
 git pull origin plugins/posts-popularity-analusis-plugin
 ```
 2. Install coposer dependecies. Run these commands in the plugin root folder:

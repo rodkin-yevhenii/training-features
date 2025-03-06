@@ -43,7 +43,7 @@ will be removed when you decide to remove the plugin.
 any arguments and support some `limit` flag.t magage have many
 
 The `limit` flag manage have many posts will be added to the demo data. I'd recommend to set more than 20th posts.
-**Pay attention** this feture add demo data for already published posts, so if you have 5 published posts but you've set
+**Pay attention** this feature add demo data for already published posts, so if you have 5 published posts but you've set
 limit 50, you will see just 5 posts in the dashboard.
 
 ## Requirements
@@ -86,3 +86,36 @@ npm i
 In this case you will instal sass module.
 
 4. Go to the admin panel and activate the plugin.
+
+## Useful commands
+`composer lint <file/folder>` - run php linter for specific file/folder. Uses WordPress standards;
+
+`composer fixer <file/folder>` - run php code beautifier  for specific file/folder. Uses WordPress standards;
+
+`composer fix <file/folder>` - run php code beautifier  and linter;
+
+`npm run start:js` - run JS watcher;
+
+`npm run build:js` - run JS builder;
+
+`npm run start:sass` - run scss watcher;
+
+`npm run build:sass` - run scss builder;
+
+`npm run start` - run watcher for scripts and styles;
+
+`npm run build` - run builder for scripts and styles;
+
+## Plugin structure
+```
+- posts-popularity-analysis.php - main plugin file (entrypoint);
+- assets                        - styles, scripts, image, etc;
+- public                        - compiled styles and scripts;
+- inc                           - Core functionality, busines logic;
+- templates                     - templetes with markup;
+```
+
+## Contacts
+- **Author**: Yevhenii Rodkin
+- **Email**: rodkin.yevhenii@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/yevhenii-rodkin/

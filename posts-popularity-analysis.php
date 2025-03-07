@@ -8,7 +8,8 @@
  * Requires PHP:        8.0
  * Author:              Yevhenii Rodkin
  * Author URI:          https://www.linkedin.com/in/yevhenii-rodkin/
- * Text Domain:         bppa
+ * Text Domain:         posts-popularity-analysis
+ * Domain Path:         /languages
  *
  * @author              Yevhenii Rodkin <rodkin.yevhenii@gmail.com>
  */

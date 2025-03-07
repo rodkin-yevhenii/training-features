@@ -1,0 +1,53 @@
+# Copyright (C) 2025 Yevhenii Rodkin
+# This file is distributed under the same license as the Blog Post Popularity Analysis plugin.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blog Post Popularity Analysis 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/posts-popularity-"
+"analysis\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-03-07 07:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: posts-popularity-analysis\n"
+"\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
+
+#. Name of the plugin
+msgid "Blog Post Popularity Analysis"
+msgstr ""
+
+#. URI of the plugin
+msgid ""
+"https://github.com/rodkin-yevhenii/training-features/tree/plugins/posts-"
+"popularity-analusis-plugin"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.linkedin.com/in/yevhenii-rodkin/"
+msgstr ""
+
+#: templates/dashboard.php:6
+msgid "Reset analytics"
+msgstr ""
+
+#: templates/shortcodes/most-popular-posts.php:17
+msgid "The most popular posts"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"The plugin allows to analyze blog post popularity directly within the "
+"WordPress admin dashboard. It tracks blog post views and displays insights "
+"on the most viewed content."
+msgstr ""
+
+#. Author of the plugin
+msgid "Yevhenii Rodkin"
+msgstr ""

@@ -14,7 +14,7 @@ if ( empty( $posts_data ) ) {
 add_action( 'wp_enqueue_scripts', array( Assets::class, 'register_shortcode_styles' ) );
 ?>
 <div id="bppa-most-popular-posts" class="popular-posts">
-	<h2><?php _e( 'The most popular posts', 'bppa' ); ?></h2>
+	<h2><?php _e( 'The most popular posts', 'posts-popularity-analysis' ); ?></h2>
 	<div class="cards">
 		<?php foreach ( $posts_data as $post_data ) : ?>
 			<div class="card">

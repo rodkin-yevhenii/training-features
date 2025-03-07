@@ -21,13 +21,28 @@ use BPPA\Register\Assets;
  */
 class Plugin {
 	/**
+	 * @var Plugin
+	 */
+	private static Plugin $instance;
+
+	/**
+	 * Main plugin file path.
+	 *
+	 * @var string
+	 */
+	private string $main_file_path;
+
+	/**
 	 * Init plugin functionality.
 	 *
 	 * @param string $file Main plugin file path.
 	 *
 	 * @return void
 	 */
-	public static function init( string $file ): void {
+	private function __construct( string $file ) {
+		$this->main_file_path = $file;
+
+		// Initialisation.
 		Activation::init( $file );
 		Assets::init();
 		Ajax\Router::init();
@@ -38,6 +53,22 @@ class Plugin {
 
 		// Shortcodes.
 		Shortcode\MostPopularPosts::init();
+
+		// Hooks.
+		add_action( 'plugins_loaded', array( $this, 'load_text_domain' ) );
+	}
+
+	/**
+	 * Load plugin text domain.
+	 *
+	 * @return void
+	 */
+	public function load_text_domain(): void {
+		load_plugin_textdomain(
+			'posts-popularity-analysis',
+			false,
+			dirname( plugin_basename( $this->main_file_path ) ) . '/languages/'
+		);
 	}
 
 	/**
@@ -60,5 +91,20 @@ class Plugin {
 	 */
 	public static function get_plugin_file_url( string $path = '' ): string {
 		return BPPA_URL . $path;
+	}
+
+	/**
+	 * Class initialisation.
+	 *
+	 * @param string $file Main plugin file path.
+	 *
+	 * @return Plugin
+	 */
+	public static function init( string $file ): Plugin {
+		if ( empty( self::$instance ) ) {
+			self::$instance = new Plugin( $file );
+		}
+
+		return self::$instance;
 	}
 }

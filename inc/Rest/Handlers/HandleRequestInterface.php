@@ -19,7 +19,7 @@ interface HandleRequestInterface {
 	/**
 	 * Method should be used as a callback function on REST API request
 	 *
-	 * @param WP_REST_Request $request
+	 * @param WP_REST_Request $request API Request.
 	 *
 	 * @return mixed
 	 */

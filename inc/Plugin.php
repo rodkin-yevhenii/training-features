@@ -21,6 +21,8 @@ use BPPA\Register\Assets;
  */
 class Plugin {
 	/**
+	 * Class instance.
+	 *
 	 * @var Plugin
 	 */
 	private static Plugin $instance;

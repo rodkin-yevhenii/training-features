@@ -57,6 +57,7 @@ class MostPopularPosts {
 
 		// Start profiling.
 		if ( defined( 'QM_VERSION' ) && current_user_can( 'manage_options' ) ) {
+			// @codingStandardsIgnoreLine WordPress.NamingConventions.ValidHookNameSniff
 			do_action( 'qm/start', 'most_popular_posts_shortcode' );
 		}
 
@@ -66,6 +67,7 @@ class MostPopularPosts {
 
 		// Stop profiling.
 		if ( defined( 'QM_VERSION' ) && current_user_can( 'manage_options' ) ) {
+            // @codingStandardsIgnoreLine WordPress.NamingConventions.ValidHookNameSniff
 			do_action( 'qm/stop', 'most_popular_posts_shortcode' );
 		}
 
@@ -76,8 +78,8 @@ class MostPopularPosts {
 	 * Get popular posts cached data.
 	 *
 	 * @param int    $limit Posts limit.
-	 * @param string $start_date Older date. Format: Y-m-d H:i:s
-	 * @param string $end_date Never date.Format: Y-m-d H:i:s
+	 * @param string $start_date Older date. Format: Y-m-d H:i:s.
+	 * @param string $end_date Never date.Format: Y-m-d H:i:s.
 	 *
 	 * @return array
 	 */
@@ -148,8 +150,8 @@ class MostPopularPosts {
 	 *
 	 * @param array  $posts_ids Most popular posts ids.
 	 * @param int    $limit Posts limit.
-	 * @param string $start_date Older date. Format: Y-m-d H:i:s
-	 * @param string $end_date Never date.Format: Y-m-d H:i:s
+	 * @param string $start_date Older date. Format: Y-m-d H:i:s.
+	 * @param string $end_date Never date.Format: Y-m-d H:i:s.
 	 *
 	 * @return WP_Query
 	 */

@@ -22,14 +22,18 @@ class RegisterPostView {
 	 * @return void
 	 */
 	public static function callback(): void {
-		if ( ! wp_verify_nonce( $_POST['nonce'], 'bppa_add_view' ) ) {
+		$nonce = filter_input( INPUT_POST, 'nonce' );
+
+		if ( ! empty( $nonce ) && ! wp_verify_nonce( $nonce, 'bppa_add_view' ) ) {
 			wp_send_json_error(
 				array( 'message' => 'Verification by nonce code failed' ),
 				403
 			);
 		}
 
-		$post_id = filter_input( INPUT_POST, 'post_id', FILTER_VALIDATE_INT ) ?: 0;
+		$post_id = filter_input( INPUT_POST, 'post_id', FILTER_VALIDATE_INT )
+			? filter_input( INPUT_POST, 'post_id', FILTER_VALIDATE_INT )
+			: 0;
 
 		if ( empty( $post_id ) ) {
 			wp_send_json_error(

@@ -122,6 +122,7 @@ class DB {
 		$sql .= ' GROUP BY post_id ORDER BY views DESC';
 
 		return $this->wpdb->get_results(
+			// @codingStandardsIgnoreLine WordPress.DB.PreparedSQLSniff
 			$sql,
 			ARRAY_A
 		);
@@ -152,6 +153,7 @@ class DB {
 	 * @return void
 	 */
 	public function drop_table(): void {
+        // @codingStandardsIgnoreLine WordPress.DB.PreparedSQLSniff
 		$this->wpdb->query( "DROP TABLE IF EXISTS {$this->table_name}" );
 	}
 
@@ -161,6 +163,7 @@ class DB {
 	 * @return void
 	 */
 	public function reset_table(): void {
+        // @codingStandardsIgnoreLine WordPress.DB.PreparedSQLSniff
 		$this->wpdb->query( "TRUNCATE TABLE {$this->table_name}" );
 	}
 

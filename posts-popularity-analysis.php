@@ -1,17 +1,18 @@
 <?php
 /**
- * Plugin Name:         Blog Post Popularity Analysis
- * Plugin URI:          https://github.com/rodkin-yevhenii/training-features/tree/plugins/posts-popularity-analusis-plugin
- * Description:         The plugin allows to analyze blog post popularity directly within the WordPress admin dashboard. It tracks blog post views and displays insights on the most viewed content.
- * Version:             1.0.0
- * Requires at least:   5.6
- * Requires PHP:        8.0
- * Author:              Yevhenii Rodkin
- * Author URI:          https://www.linkedin.com/in/yevhenii-rodkin/
- * Text Domain:         posts-popularity-analysis
- * Domain Path:         /languages
+ * Plugin Name:       Blog Post Popularity Analysis
+ * Plugin URI:        https://github.com/rodkin-yevhenii/training-features/tree/plugins/posts-popularity-analusis-plugin
+ * Description:       The plugin allows to analyze blog post popularity directly within the WordPress admin dashboard.
+ * Version:           1.0.0
+ * Requires at least: 5.6
+ * Requires PHP:      8.0
+ * Author:            Yevhenii Rodkin
+ * Author URI:        https://www.linkedin.com/in/yevhenii-rodkin/
+ * Text Domain:       posts-popularity-analysis
+ * Domain Path:       /languages
  *
- * @author              Yevhenii Rodkin <rodkin.yevhenii@gmail.com>
+ * @package           BPPA
+ * @author            Yevhenii Rodkin <rodkin.yevhenii@gmail.com>
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

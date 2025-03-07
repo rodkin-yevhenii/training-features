@@ -2,6 +2,7 @@
 /**
  * Render notification messages in admin panel
  *
+ * @package BPPA\Admin
  * @author Yevhenii Rodkin <rodkin.yevhenii@gmail.com>
  */
 
@@ -26,7 +27,7 @@ class Notice {
 		<?php
 
 		printf(
-			ob_get_clean(),
+			esc_html( ob_get_clean() ),
 			esc_html( BPPA_DIR )
 		);
 	}

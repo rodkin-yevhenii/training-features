@@ -1,3 +1,14 @@
+<?php
+/**
+ * Plugin dashboard template.
+ *
+ * The Plugin dashboard markup file.
+ *
+ * @package BPPA
+ * @author Yevhenii Rodkin <rodkin.yevhenii@gmail.com>
+ */
+
+?>
 <div class="bppa-dashboard">
 	<div class="bppa-dashboard__header header">
 		<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
@@ -10,15 +21,21 @@
 	<div
 		id="range"
 		class="bppa-dashboard__range range"
-		data-range="<?php echo filter_input( INPUT_GET, 'range' ) ?: 'all'; ?>"
+		data-range="
+		<?php
+		echo filter_input( INPUT_GET, 'range' )
+			? filter_input( INPUT_GET, 'range' )
+			: 'all';
+		?>
+		"
 	>
 		<span>Show results for:</span>
-		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=day' ); ?>">Day</a>
-		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=week' ); ?>">Week</a>
-		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=2_weeks' ); ?>">2 Weeks</a>
-		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=month' ); ?>">Month</a>
-		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=3_months' ); ?>">3 Months</a>
-		<a href="<?php echo admin_url( 'edit.php?page=bppa-analytics&range=all' ); ?>">All</a>
+		<a href="<?php echo esc_url( admin_url( 'edit.php?page=bppa-analytics&range=day' ) ); ?>">Day</a>
+		<a href="<?php echo esc_url( admin_url( 'edit.php?page=bppa-analytics&range=week' ) ); ?>">Week</a>
+		<a href="<?php echo esc_url( admin_url( 'edit.php?page=bppa-analytics&range=2_weeks' ) ); ?>">2 Weeks</a>
+		<a href="<?php echo esc_url( admin_url( 'edit.php?page=bppa-analytics&range=month' ) ); ?>">Month</a>
+		<a href="<?php echo esc_url( admin_url( 'edit.php?page=bppa-analytics&range=3_months' ) ); ?>">3 Months</a>
+		<a href="<?php echo esc_url( admin_url( 'edit.php?page=bppa-analytics&range=all' ) ); ?>">All</a>
 	</div>
 	<div class="bppa-dashboard__body">
 		<table id="bppa-dashboard__table" class="display" style="width:100%">

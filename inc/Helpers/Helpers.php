@@ -40,6 +40,8 @@ class Helpers {
 	}
 
 	/**
+	 * Delete post views after when the post has been deleted.
+	 *
 	 * @param int $post_id Post ID.
 	 *
 	 * @return void

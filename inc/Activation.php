@@ -2,6 +2,7 @@
 /**
  * Works with activation, deactivation, uninstalling hooks.
  *
+ * @package BPPA
  * @author Yevhenii Rodkin <rodkin.yevhenii@gmail.com>
  */
 
@@ -9,17 +10,24 @@ namespace BPPA;
 
 use BPPA\Helpers\DB;
 
+/**
+ * Class Activation
+ */
 class Activation {
 	/**
+	 * Class instance.
+	 *
 	 * @var Activation Class instance.
 	 */
 	private static Activation $instance;
 
 	/**
-	 * @param string $file
+	 * Class construct.
+	 *
+	 * @param string $file Main plugin file path.
 	 */
 	private function __construct( string $file ) {
-		// Activation and deactivation
+		// Activation and deactivation.
 		register_activation_hook( $file, array( $this, 'activate' ) );
 		register_uninstall_hook( $file, array( self::class, 'uninstall' ) );
 	}

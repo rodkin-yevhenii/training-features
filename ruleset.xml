@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ruleset name="Custom WordPress Ruleset">
+  <description>Custom PHPCS ruleset based on WordPress standards.</description>
+
+  <!-- Include base WordPress standards -->
+  <rule ref="./vendor/wp-coding-standards/wpcs/WordPress/ruleset.xml"/>
+  <rule ref="WordPress-Core"/>
+  <rule ref="WordPress-Extra"/>
+  <rule ref="./vendor/wp-coding-standards/wpcs/WordPress-Docs/ruleset.xml"/>
+
+  <!-- Disable filename and class filename rules -->
+  <rule ref="WordPress.Files.FileName">
+    <severity>0</severity>
+  </rule>
+
+  <!-- Allow longer lines (default is 80 characters) -->
+  <rule ref="Generic.Files.LineLength">
+    <properties>
+      <property name="lineLimit" value="120"/>
+      <property name="absoluteLineLimit" value="160"/>
+    </properties>
+  </rule>
+
+  <!-- Ignore specific folders -->
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+</ruleset>

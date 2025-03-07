@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "type": "wordpress-plugin",
   "scripts": {
-    "fixer": "php vendor/bin/phpcbf --standard=WordPress --extensions=php  --ignore=vendor/*",
-    "lint": "php vendor/bin/phpcs --standard=WordPress --extensions=php --ignore=vendor/*",
+    "fixer": "php vendor/bin/phpcbf --standard=ruleset.xml --extensions=php",
+    "lint": "php vendor/bin/phpcs --standard=ruleset.xml --extensions=php",
     "fix": [
       "@fixer",
       "@lint"

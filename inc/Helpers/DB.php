@@ -20,11 +20,11 @@ class DB {
 	/**
 	 * Date range constants.
 	 */
-	const RANGE_ALL     = 'ALL';
-	const RANGE_DAY     = 'DAY';
-	const RANGE_WEEK    = 'WEEK';
-	const RANGE_2_WEEKS = '2 WEEKS';
-	const RANGE_MONTH   = 'MONTH';
+	const RANGE_ALL      = 'ALL';
+	const RANGE_DAY      = 'DAY';
+	const RANGE_WEEK     = 'WEEK';
+	const RANGE_2_WEEKS  = '2 WEEKS';
+	const RANGE_MONTH    = 'MONTH';
 	const RANGE_3_MONTHS = '3 MONTHS';
 
 	/**
